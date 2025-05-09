@@ -65,7 +65,7 @@ Pick three.";
     }
 }
 
-
+/// 返回contents中所有包含query的行
 fn search<'a>(query: &str, contents: &'a str) -> Vec<&'a str> {
     contents.lines()
         .filter(| line | line.contains(query))

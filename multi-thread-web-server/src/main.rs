@@ -10,10 +10,6 @@ fn main() {
     
     for stream in listener.incoming().take(2) {
         let stream = stream.unwrap();
-        // 为每一个请求创建一个线程
-        // thread::spawn(|| {
-        //     handle_connection(stream);
-        // });
 
         // 使用线程池
         pool.execute(|| {
